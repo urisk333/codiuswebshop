@@ -12,11 +12,3 @@ export type Item = {
   price: number,
   amount: number
 }
-
-export type PickedItem = {
-  id: number,
-  name: string,
-  image: string,
-  price: number,
-  amount: number
-}

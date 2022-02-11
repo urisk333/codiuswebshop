@@ -1,0 +1,74 @@
+.shopitem-container {
+  text-align: center;
+  width: 300px;
+  height: 100%;
+  border-radius: 20px;
+  background-color: white;
+  position: relative;
+}
+
+.shopitem-container:hover {
+  box-shadow: 0 0 16px gray;
+}
+
+img {
+  height: 260px;
+  width: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.shopitem-info {
+  display: flex;
+  flex-direction: row;
+  width: 260px;
+  justify-content: space-between;
+  margin: 5px 0 0 20px;
+}
+
+.shopitem-button {
+  width: 80px;
+  height: 30px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bolder;
+  background-color: #118dd6;
+  color: white;
+  border-radius: 8px;
+}
+
+.shopitem-button:hover {
+  color: black;
+}
+
+.shopitem-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.remove {
+  margin-left: 40px;
+}
+
+.add {
+  margin-right: 40px;
+}
+
+span {
+  max-width: 10px;
+}
+
+.promo-title {
+  background-color: white;
+  width: 160px;
+  height: 30px;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 50;
+  top: 10%;
+  left: 34%;
+  line-height: 30px;
+}

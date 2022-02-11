@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  background-color: #118dd6;
+  margin-bottom: 30px;
+  justify-content: flex-end;
+}
+
+.header-button {
+  width: 30px;
+  background-color: #118dd6;
+}
+
+.fa-solid {
+  width: 30px;
+  height: 30px;
+  background-color: #118dd6;
+}
+
+.header-amount {
+  height: 60px;
+  line-height: 60px;
+  font-weight: bolder;
+  margin: 0 20px 0 10px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}

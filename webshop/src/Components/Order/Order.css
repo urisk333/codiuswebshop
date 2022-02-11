@@ -1,0 +1,36 @@
+.order-container {
+  display: flex;
+  justify-content: center;
+}
+
+.order-window {
+  text-align: center;
+  background-color: white;
+  border-radius: 20px;
+  width: 320px;
+  height: 320px;
+  margin-top: 40px;
+}
+
+.order-window:hover {
+  box-shadow: 0 0 16px gray;
+}
+
+.order-title {
+  padding-top: 20px;
+}
+
+.order-button {
+  width: 80px;
+  height: 30px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: bolder;
+  background-color: #118dd6;
+  color: white;
+  border-radius: 8px;
+  margin-top: 100px;
+}
+
+.order-button:hover {
+  color: black;
+}
