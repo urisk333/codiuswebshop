@@ -1,0 +1,22 @@
+export type User = {
+  id: number,
+  email: string,
+  address: string,
+  creditCard: string
+}
+
+export type Item = {
+  id: number,
+  name: string,
+  image: string,
+  price: number,
+  amount: number
+}
+
+export type PickedItem = {
+  id: number,
+  name: string,
+  image: string,
+  price: number,
+  amount: number
+}
