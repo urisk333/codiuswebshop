@@ -37,13 +37,13 @@ function CheckOut ({ users, pickedItems, quantitySensor }: IProps) {
         return total - (total * 0.05);
     } else if (isChecked20Minus && !isChecked5Off) {
         if (total < 20) {
-          alert('Not able to purchase this order as a negative value.');
+          alert('Error 20 Minus: Not able to purchase this order as a negative value.');
         }
         return total - 20;
     } else if (isChecked5Off && isChecked20Minus) {
         const totalAmount = (total - (total * 0.05)) - 20;
         if (totalAmount < 0) {
-          alert('Not able to purchase this order as a negative value.');
+          alert('Error 20 Minus and 5%: Not able to purchase this order as a negative value.');
         }
         return totalAmount;
     } else if (isCheckedMotion && isCheckedSmoke) {
@@ -52,9 +52,7 @@ function CheckOut ({ users, pickedItems, quantitySensor }: IProps) {
         return (total - (74.97 - 65));
     } else if (isCheckedSmoke && !isCheckedMotion) {
         return (total - (39.98 - 35));
-    } else if (total < 0) {
-        alert('Not able to purchase this order as a negative value.');
-    }
+    } 
     return total;
   }
 
@@ -81,6 +79,8 @@ function CheckOut ({ users, pickedItems, quantitySensor }: IProps) {
     } else if (truth2) {
       alert('You already have this item in your cart. Please remove it before using the discount.');
       return;
+    } else if (isCheckedMotion) {
+      setIsCheckedMotion(!isCheckedMotion);
     } else {
       setIsCheckedMotion(!isCheckedMotion);
       quantitySensor('Motion Sensor', 3);
@@ -91,15 +91,16 @@ function CheckOut ({ users, pickedItems, quantitySensor }: IProps) {
   const handleSmokeSensor = () => {
 
     const truth1 = pickedItems.some(item => item.name === "Smoke Sensor" && item.amount === 2 && isCheckedSmoke);
-    const truth2 = pickedItems.some(item => item.name === "Smoke Sensor" && item.amount > 0 && !isCheckedSmoke ? true : false);
+    const truth2 = pickedItems.some(item => item.name === "Smoke Sensor" && item.amount > 0 ? true : false);
 
     if (truth1) {
       setIsCheckedSmoke(!isCheckedSmoke);
       quantitySensor('Smoke Sensor', 2);
     } else if (truth2) {
-      setIsCheckedSmoke(isCheckedSmoke);
       alert('You already have this item in your cart. Please remove it before using the discount.');
       return;
+    } else if (isCheckedSmoke) {
+      setIsCheckedSmoke(!isCheckedSmoke);
     } else {
       setIsCheckedSmoke(!isCheckedSmoke);
       quantitySensor('Smoke Sensor', 2);
