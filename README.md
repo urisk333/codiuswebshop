@@ -21,7 +21,6 @@ Follow the next steps to run the server side of the application:
 ```
 cd server
 npm i
-nodemon index.ts
 ```
 
 2. Start the PostgreSQL database from your terminal.
@@ -33,6 +32,12 @@ DATABASE_URL="postgresql://USER:PASSWORD@127.0.0.1:5432/DATABASE"
 ```
 
 4. In your terminal, inside the models folder, run in the order `npx prisma generate` and `npx prisma migrate dev`, and afterwards delete _node_modules_ from that folder.
+
+5. Run the server:
+
+```
+nodemon index.ts
+```
 
 ## Client side
 
