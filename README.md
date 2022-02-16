@@ -16,14 +16,14 @@ git clone https://github.com/urisk333/codiuswebshop
 
 Follow the next steps to run the server side of the application:
 
-1. Run the server side of the application:
+1. Start the PostgreSQL database from your terminal.
+
+2. Run the server side of the application:
 
 ```
 cd server
 npm i
 ```
-
-2. Start the PostgreSQL database from your terminal.
 
 3. Create .env file in the models folder, and add the credentials to the file, where your USER and PASSWORD are the ones related to your PostgreSQL database and DATABASE is just a name which you want to give to your database:
 
